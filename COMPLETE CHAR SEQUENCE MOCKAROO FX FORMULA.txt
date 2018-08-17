@@ -1,0 +1,1 @@
+if this == '0' or this == '1' or this == '2' or this == '3' or this == '4' or this == '5' then '0' elsif this == '6' or this == '7' or this == '8' or this == '9' or this == 't' then '1' end
