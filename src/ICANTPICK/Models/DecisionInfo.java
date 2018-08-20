@@ -1,6 +1,6 @@
 package ICANTPICK.Models;
 
-public class Decision_info {
+public class DecisionInfo {
 	
 	//VARIABLES
 	private int user_id;
@@ -12,11 +12,11 @@ public class Decision_info {
 	private String privacy;
 	
 	//DEFAULT CONSTRUCTOR
-	public Decision_info() {
+	public DecisionInfo() {
 	}
 	
 	//CONSTRUCTOR WITH FIELDS
-	public Decision_info(int user_id, int decision_id, String date_created, String winner, int win_percent,
+	public DecisionInfo(int user_id, int decision_id, String date_created, String winner, int win_percent,
 			String complete, String privacy) {
 		super();
 		this.user_id = user_id;

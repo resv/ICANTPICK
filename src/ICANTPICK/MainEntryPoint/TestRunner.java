@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import ICANTPICK.DAO.OracleConnection;
-import ICANTPICK.Models.User_info;
+import ICANTPICK.Models.UserInfo;
 
 public class TestRunner {
 
@@ -17,8 +17,8 @@ public class TestRunner {
 	}
 
 //METHOD FOR getUserByEmail() - WORKS!	
-	public static User_info vgetUserByEmail(String email) throws SQLException {
-		User_info user_info = null;
+	public static UserInfo vgetUserByEmail(String email) throws SQLException {
+		UserInfo user_info = null;
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet result = null;
@@ -30,7 +30,7 @@ public class TestRunner {
 			ps.setString(1, email);
 			result = ps.executeQuery();
 			
-			user_info = new User_info();
+			user_info = new UserInfo();
 			
 			if (result.next()) {
 				user_info.setUser_id(result.getInt(1));

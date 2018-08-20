@@ -1,6 +1,6 @@
 package ICANTPICK.Models;
 
-public class User_info {
+public class UserInfo {
 
 	//VARIABLES
 	private int user_id;
@@ -10,11 +10,11 @@ public class User_info {
 	private int lvl;
 	
 	//DEFAULT CONSTRUCTOR
-	public User_info() {
+	public UserInfo() {
 	}
 
 	//CONSTRUCTOR WITH FIELDS
-	public User_info(int user_id, String username, String email, String password, int lvl) {
+	public UserInfo(int user_id, String username, String email, String password, int lvl) {
 		super();
 		this.user_id = user_id;
 		this.username = username;

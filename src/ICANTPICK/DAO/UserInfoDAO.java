@@ -5,13 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import ICANTPICK.Interfaces.User_infoDAOi;
-import ICANTPICK.Models.User_info;
+import ICANTPICK.Interfaces.UserInfoDAOi;
+import ICANTPICK.Models.UserInfo;
 
-public class User_infoDAO implements User_infoDAOi {
+public class UserInfoDAO implements UserInfoDAOi {
 
-	public User_info getUserByEmail(String email) throws SQLException {
-		User_info user_info = null;
+	public UserInfo getUserByEmail(String email) throws SQLException {
+		UserInfo user_info = null;
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet result = null;
@@ -23,7 +23,7 @@ public class User_infoDAO implements User_infoDAOi {
 			ps.setString(1, email);
 			result = ps.executeQuery();
 			
-			user_info = new User_info();
+			user_info = new UserInfo();
 			
 			if (result.next()) {
 				user_info.setUser_id(result.getInt(1));
