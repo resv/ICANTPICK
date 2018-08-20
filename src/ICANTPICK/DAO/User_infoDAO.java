@@ -1,23 +1,16 @@
-package ICANTPICK.MainEntryPoint;
+package ICANTPICK.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import ICANTPICK.DAO.OracleConnection;
+import ICANTPICK.Interfaces.User_infoDAOi;
 import ICANTPICK.Models.User_info;
 
-public class TestRunner {
+public class User_infoDAO implements User_infoDAOi {
 
-	
-//----------------MAIN CALLER HERE----------------------------------	
-	public static void main(String[] args) throws SQLException {
-		vgetUserByEmail("akim456@gmail.com");
-	}
-
-//METHOD FOR getUserByEmail() - WORKS!	
-	public static User_info vgetUserByEmail(String email) throws SQLException {
+	public User_info getUserByEmail(String email) throws SQLException {
 		User_info user_info = null;
 		Connection conn = null;
 		PreparedStatement ps = null;
@@ -53,5 +46,4 @@ public class TestRunner {
 		}
 		return user_info;
 	}
-	
 }
