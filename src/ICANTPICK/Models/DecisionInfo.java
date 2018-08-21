@@ -10,6 +10,7 @@ public class DecisionInfo {
 	private int win_percent;
 	private String complete;
 	private String privacy;
+	private int star;
 	
 	//DEFAULT CONSTRUCTOR
 	public DecisionInfo() {
@@ -17,7 +18,7 @@ public class DecisionInfo {
 	
 	//CONSTRUCTOR WITH FIELDS
 	public DecisionInfo(int user_id, int decision_id, String date_created, String winner, int win_percent,
-			String complete, String privacy) {
+			String complete, String privacy, int star) {
 		super();
 		this.user_id = user_id;
 		this.decision_id = decision_id;
@@ -26,6 +27,7 @@ public class DecisionInfo {
 		this.win_percent = win_percent;
 		this.complete = complete;
 		this.privacy = privacy;
+		this.star = star;
 	}
 	
 	//GETTERS AND SETTERS
@@ -70,5 +72,11 @@ public class DecisionInfo {
 	}
 	public void setPrivacy(String privacy) {
 		this.privacy = privacy;
+	}
+	public int getStar() {
+		return star;
+	}
+	public void setStar(int star) {
+		this.star = star;
 	}
 }
