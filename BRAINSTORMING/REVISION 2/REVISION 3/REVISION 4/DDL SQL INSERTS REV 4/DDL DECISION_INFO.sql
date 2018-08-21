@@ -1,4 +1,4 @@
-create table DECISION_INFO (
+create table DECISIONINFO (
 	DECISION_ID INT,
 	USER_ID INT,
 	DATE_CREATED DATE,
