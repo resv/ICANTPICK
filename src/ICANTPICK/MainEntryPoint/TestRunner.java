@@ -25,7 +25,7 @@ public class TestRunner {
 		
 		try {
 			conn = OracleConnection.getConnection();
-			String sql = "SELECT * FROM USER_INFO\r\n WHERE EMAIL =?";
+			String sql = "SELECT * FROM USERINFO\r\n WHERE EMAIL =?";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, email);
 			result = ps.executeQuery();
